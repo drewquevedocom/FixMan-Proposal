@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Strategic Digital Growth Proposal for FixMan Appliance Repair">
+<title>FixMan Appliance Repair — Digital Growth Proposal</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-blue: #1e3a5f;
+    --primary-orange: #e87a2e;
+    --primary-dark: #111111;
+    --secondary-dark: #1a1a1a;
+    --bg-light: #f0f4f8;
+    --text-dark: #1a2332;
+    --text-light: #f4f4f4;
+    --success: #27ae60;
+    --border-color: #d4dbe5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a5f' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    border-top: 5px solid var(--primary-orange);
+  }
+
+  /* Typography */
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: var(--primary-dark); }
+  p { margin-bottom: 1.2em; font-size: 1.1em; color: #4a4a4a; }
+  strong { color: var(--primary-dark); font-weight: 700; }
+
+  /* Header */
+  .header {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    padding: 80px 60px;
+    text-align: center;
+    position: relative;
+    background-image: linear-gradient(rgba(30,58,95,0.82), rgba(10,25,41,0.88)),
+      url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .header h1 {
+    font-size: 3.5em;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+  }
+
+  .header h2 {
+    font-size: 1.3em;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-orange);
+    margin-bottom: 30px;
+  }
+
+  .header .date-line {
+    font-size: 0.95em;
+    opacity: 0.7;
+    letter-spacing: 1px;
+  }
+
+  /* Letter Section */
+  .letter-section {
+    padding: 80px 60px;
+    background: #fff;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .letter-section .section-label {
+    text-transform: uppercase;
+    color: var(--primary-orange);
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    display: block;
+  }
+  .letter-section h3 {
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    font-style: italic;
+  }
+  .signature {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.8em;
+    margin-top: 30px;
+    color: var(--primary-dark);
+  }
+  .signature-title {
+    font-size: 0.95em;
+    color: #888;
+    margin-top: 5px;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: var(--primary-blue);
+    color: white;
+  }
+  .stat-box {
+    padding: 40px;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.15);
+  }
+  .stat-box:last-child { border-right: none; }
+  .stat-number {
+    font-size: 2.5em;
+    color: var(--primary-orange);
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+  }
+  .stat-label {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9em;
+    margin-top: 10px;
+    opacity: 0.8;
+  }
+
+  /* Content Sections */
+  .section {
+    padding: 60px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px auto;
+  }
+  .section-header h3 { font-size: 2.2em; margin-bottom: 15px; }
+  .section-header .sub {
+    text-transform: uppercase;
+    color: var(--primary-orange);
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  /* Deliverable Cards */
+  .deliverables-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  .deliverable-card {
+    background: #fafbfc;
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  .deliverable-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-color: var(--primary-orange);
+  }
+  .deliverable-card .icon {
+    font-size: 1.8em;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+  }
+  .deliverable-card h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  .deliverable-card p {
+    font-size: 0.95em;
+    color: #666;
+    margin-bottom: 0;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+  }
+  .timeline-item {
+    padding: 20px 30px;
+    background: white;
+    border-left: 4px solid var(--primary-orange);
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  }
+  .timeline-week {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: var(--primary-orange);
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  .timeline-item p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 0;
+  }
+
+  /* ROI Section */
+  .roi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+  }
+
+  .roi-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.05em;
+  }
+  .roi-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .roi-table td:first-child {
+    font-weight: bold;
+    color: var(--primary-dark);
+  }
+  .roi-table tr:last-child td { border-bottom: none; }
+  .highlight-green { color: var(--success); font-weight: bold; }
+  .highlight-red { color: #e74c3c; font-weight: bold; }
+
+  .automation-list {
+    list-style: none;
+  }
+  .automation-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .automation-list li:last-child { border-bottom: none; }
+  .automation-list li i {
+    color: var(--primary-orange);
+    margin-top: 4px;
+    font-size: 1.1em;
+  }
+  .automation-list .auto-title {
+    font-weight: bold;
+    color: var(--primary-dark);
+  }
+
+  /* Visual Design Grid */
+  .design-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .design-card {
+    background: white;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    color: inherit;
+    overflow: hidden;
+  }
+  .design-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: var(--primary-orange);
+  }
+  .design-image-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 3px solid var(--primary-orange);
+    background: var(--bg-light);
+    position: relative;
+    padding: 10px;
+  }
+  .design-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .design-card:hover .design-image-container img {
+    transform: scale(1.05);
+  }
+  .design-info { padding: 30px; text-align: center; }
+  .design-info h4 { margin-bottom: 10px; font-size: 1.4em; }
+  .design-info p { font-size: 0.9em; color: #666; margin-bottom: 0; }
+
+  /* Tables */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    font-size: 1.05em;
+  }
+  .data-table th {
+    text-align: left;
+    padding: 15px;
+    border-bottom: 2px solid var(--primary-dark);
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+  }
+  .data-table td {
+    padding: 20px 15px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+
+  /* Pricing */
+  .pricing-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border: 1px solid var(--primary-dark);
+  }
+  .pricing-card {
+    padding: 50px;
+    background: white;
+    flex: 1;
+    width: 50%;
+    min-width: 300px;
+  }
+  .pricing-card.dark {
+    background: var(--primary-blue);
+    color: white;
+  }
+  .pricing-card.dark h4, .pricing-card.dark .price { color: white; }
+  .pricing-card.dark p { color: rgba(255,255,255,0.7); }
+  .pricing-card.dark li { border-bottom-color: rgba(255,255,255,0.15); }
+
+  .price {
+    font-size: 3em;
+    font-family: 'Playfair Display', serif;
+    margin: 20px 0;
+  }
+  .price span {
+    font-size: 0.4em;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-transform: uppercase;
+    vertical-align: middle;
+    opacity: 0.7;
+  }
+
+  .features-list { list-style: none; margin-top: 30px; }
+  .features-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+  }
+  .features-list li i { color: var(--primary-orange); margin-right: 15px; }
+
+  /* Agent Stack Section */
+  .agent-stack {
+    background: var(--primary-dark);
+    color: white;
+    padding: 60px;
+  }
+  .agent-stack .section-header h3 { color: white; }
+  .agent-stack .section-header .sub { color: var(--primary-orange); }
+  .agent-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+  }
+  .agent-card {
+    background: var(--secondary-dark);
+    border: 1px solid #333;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  .agent-card:hover {
+    border-color: var(--primary-orange);
+    transform: translateY(-3px);
+  }
+  .agent-card .icon {
+    font-size: 2em;
+    color: var(--primary-orange);
+    margin-bottom: 15px;
+  }
+  .agent-card h4 {
+    color: white;
+    margin-bottom: 8px;
+    font-size: 1.15em;
+  }
+  .agent-card .agent-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4em;
+    color: var(--primary-orange);
+    margin: 10px 0;
+    font-weight: bold;
+  }
+  .agent-card p {
+    font-size: 0.9em;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0;
+  }
+
+  /* CTA */
+  .cta-footer {
+    background: var(--primary-orange);
+    padding: 80px 40px;
+    text-align: center;
+  }
+  .cta-footer h3 {
+    color: white;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+  }
+  .cta-footer p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+  }
+  .cta-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--primary-dark);
+    color: white;
+    padding: 20px 60px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--primary-dark);
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 0.95em;
+  }
+  .cta-btn:hover {
+    background: transparent;
+    color: var(--primary-dark);
+  }
+  .cta-btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--primary-dark);
+    padding: 20px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--primary-dark);
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 0.95em;
+  }
+  .cta-btn-secondary:hover {
+    background: var(--primary-dark);
+    color: white;
+  }
+  .fine-print {
+    font-size: 0.9em;
+    opacity: 0.7;
+    margin-top: 25px;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* Footer */
+  .proposal-footer {
+    padding: 20px 60px;
+    text-align: center;
+    background: var(--primary-dark);
+  }
+  .proposal-footer a {
+    color: rgba(255,255,255,0.4);
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+  .proposal-footer a:hover { color: var(--primary-orange); }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .header { padding: 60px 20px; }
+    .header h1 { font-size: 2.2em; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-box { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.15); }
+    .stat-box:last-child { border-bottom: none; }
+    .letter-section { padding: 40px 20px; }
+    .section { padding: 40px 20px; }
+    .deliverables-grid { grid-template-columns: 1fr; }
+    .roi-grid { grid-template-columns: 1fr; }
+    .design-grid { grid-template-columns: 1fr; }
+    .pricing-wrapper { flex-direction: column; }
+    .pricing-card { width: 100%; }
+    .agent-cards { grid-template-columns: 1fr; }
+    .cta-group { flex-direction: column; align-items: center; }
+    .cta-footer { padding: 60px 20px; }
+  }
+
+  /* Scroll Animations */
+  .animate-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .animate-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- ============================================
+         HEADER
+         ============================================ -->
+    <div class="header">
+      <h1>FixMan Appliance Repair</h1>
+      <h2>Digital Growth Proposal</h2>
+      <div class="date-line">Prepared for Vlad &bull; Thousand Oaks, CA &bull; March 2026</div>
+    </div>
+
+    <!-- ============================================
+         EXECUTIVE SUMMARY
+         ============================================ -->
+    <div class="letter-section animate-in">
+      <span class="section-label">Executive Summary</span>
+      <h3>Vlad, let's talk about what's next.</h3>
+      <p>You've built something real. <strong>356 Yelp reviews, a perfect 5.0-star rating, and Yelp Guaranteed status.</strong> You've been serving families in the Conejo Valley since 2015. Every appliance you fix is another family that trusts you with their home. That's a powerful foundation.</p>
+      <p>But right now, you're invisible online. <strong>No website. Only 4 Google reviews.</strong> Your competitors — AMPM Appliances, Allstar, Krupo — have websites, SEO, and booking systems eating your lunch. Every day without an online presence, you're losing jobs to companies that aren't as good as you. They just show up first on Google.</p>
+      <p>I'm proposing a complete <strong>Digital Growth System</strong>. Not just a website — a marketing machine that brings in new customers 24/7. A professional website, a local SEO strategy to dominate "appliance repair near me" searches, an AI phone agent to never miss a call, and automated review generation to turn your Yelp dominance into Google dominance too. <strong>You fix the appliances. The system brings the customers.</strong></p>
+      <div class="signature">Drew Quevedo</div>
+      <div class="signature-title">Digital Strategy Consultant &bull; 24+ Years Experience</div>
+    </div>
+
+    <!-- ============================================
+         KPI STATS BAR
+         ============================================ -->
+    <div class="stats-grid">
+      <div class="stat-box animate-in">
+        <div class="stat-number">5.0★</div>
+        <div class="stat-label">Yelp Rating (356 Reviews)</div>
+      </div>
+      <div class="stat-box animate-in">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Current Website (Problem)</div>
+      </div>
+      <div class="stat-box animate-in">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">New Leads/Month Target</div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         DELIVERABLES — The Growth Engine
+         ============================================ -->
+    <div class="section animate-in">
+      <div class="section-header">
+        <div class="sub">Deliverables</div>
+        <h3>The 5-Point Growth Engine</h3>
+        <p>We're not just building a webpage. We're installing a lead generation machine.</p>
+      </div>
+
+      <div class="deliverables-grid">
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-laptop-code"></i></div>
+          <h4>1. Professional Website</h4>
+          <p>A mobile-first, modern website with your services, service areas, 5-star reviews, and a prominent "Call Now" button. Designed to convert visitors into callers. Built to outclass every competitor in the Conejo Valley.</p>
+        </div>
+
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-search-location"></i></div>
+          <h4>2. Local SEO Domination</h4>
+          <p>Optimize your Google Business Profile. Fix your NAP consistency. Target keywords like "appliance repair Thousand Oaks" and "refrigerator repair near me." Goal: page 1 of Google Maps in 90 days.</p>
+        </div>
+
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-robot"></i></div>
+          <h4>3. AI Phone Receptionist</h4>
+          <p>A Voice AI agent that answers your phone 24/7 — after hours, during jobs, on weekends. It sounds human, books appointments, answers FAQs about your services, and never misses a call. You stop losing leads.</p>
+        </div>
+
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-star"></i></div>
+          <h4>4. Review Generation Engine</h4>
+          <p>Automated SMS after every completed job asking for a Google review. Your 5-star Yelp reputation is incredible — now we replicate it on Google. Target: 50+ Google reviews in 6 months.</p>
+        </div>
+
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-chart-line"></i></div>
+          <h4>5. Content & SEO Strategy</h4>
+          <p>Monthly blog posts and local content targeting the Conejo Valley. "How to know if your fridge needs repair." "Top 5 signs your washer is failing." Content that brings organic traffic and positions you as the expert.</p>
+        </div>
+
+        <div class="deliverable-card animate-in">
+          <div class="icon"><i class="fas fa-gift"></i></div>
+          <h4>Bonus: Free Website</h4>
+          <p>The website is on me — no charge. I'm building it as a portfolio piece and investing in our partnership. You get a $2,000+ professional website at zero cost.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         THE EXPERIENCE — A Customer Walkthrough
+         ============================================ -->
+    <div class="section animate-in">
+      <div class="section-header">
+        <div class="sub">The Experience</div>
+        <h3>A Customer Walkthrough</h3>
+        <p>Here's how the new system works for a homeowner named "Maria."</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item animate-in">
+          <div class="timeline-week">1. Discovery</div>
+          <p>Maria's dishwasher stops working. She searches "dishwasher repair Thousand Oaks" on her phone. She sees <strong>FixMan Appliance Repair</strong> at the top of Google Maps — 5.0 stars, great reviews, professional photos. She clicks "Website."</p>
+        </div>
+
+        <div class="timeline-item animate-in">
+          <div class="timeline-week">2. The Website</div>
+          <p>She lands on a clean, professional site. She sees all your services, your 10+ years of experience, real customer testimonials, and a big orange <strong>"Call Now"</strong> button. She taps it.</p>
+        </div>
+
+        <div class="timeline-item animate-in">
+          <div class="timeline-week">3. The Call</div>
+          <p>It's 7:30 PM — you're off the clock. But the <strong>AI Receptionist</strong> picks up: <em>"Thanks for calling FixMan Appliance Repair! I can help schedule a service call. What appliance needs repair?"</em> Maria books for tomorrow morning.</p>
+        </div>
+
+        <div class="timeline-item animate-in">
+          <div class="timeline-week">4. The Service</div>
+          <p>You show up on time. Diagnose the problem. Fix it. Maria is thrilled — professional, honest, fast. Exactly what the reviews promised.</p>
+        </div>
+
+        <div class="timeline-item animate-in">
+          <div class="timeline-week">5. The Review</div>
+          <p>One hour after you leave, Maria gets a text: <em>"Thanks for choosing FixMan! If we did a great job, would you leave us a quick Google review?"</em> She clicks the link and leaves 5 stars. <strong>Your Google profile grows stronger.</strong></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         COMPETITIVE LANDSCAPE
+         ============================================ -->
+    <div class="section animate-in" style="background: #fafbfc;">
+      <div class="section-header">
+        <div class="sub">The Competition</div>
+        <h3>Where You Stand Today</h3>
+        <p>Here's the honest truth about your competitive landscape.</p>
+      </div>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Website</th>
+            <th>Google Reviews</th>
+            <th>Yelp Reviews</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong style="color:var(--primary-orange);">FixMan (You)</strong></td>
+            <td style="color:#e74c3c;">❌ None</td>
+            <td>4 reviews</td>
+            <td><strong style="color:var(--success);">356 reviews (5.0★)</strong></td>
+          </tr>
+          <tr>
+            <td>AMPM Appliances</td>
+            <td style="color:var(--success);">✅ Yes</td>
+            <td>293 reviews (4.7★)</td>
+            <td>Has profile</td>
+          </tr>
+          <tr>
+            <td>Allstar Appliance</td>
+            <td style="color:var(--success);">✅ Full site (Since 1989)</td>
+            <td>Active profile</td>
+            <td>Has profile</td>
+          </tr>
+          <tr>
+            <td>Krupo Appliances</td>
+            <td style="color:var(--success);">✅ SEO-optimized</td>
+            <td>Active profile</td>
+            <td>Has profile</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:25px;font-style:italic;color:#888;">Your service quality is the best in the valley — 5.0 stars across 356 reviews proves it. But without a website and with only 4 Google reviews, you're invisible where 90% of people search first.</p>
+    </div>
+
+    <!-- ============================================
+         ROI CALCULATION + AUTOMATIONS
+         ============================================ -->
+    <div class="section animate-in">
+      <div class="section-header">
+        <div class="sub">Return on Investment</div>
+        <h3>The Math is Simple</h3>
+        <p>The system costs $200–$300/month. Here's how fast it pays for itself.</p>
+      </div>
+
+      <div class="roi-grid">
+        <div>
+          <h4 style="margin-bottom:15px;">ROI Calculation</h4>
+          <table class="roi-table">
+            <tr>
+              <td>Monthly Cost</td>
+              <td class="highlight-red">$200–$300</td>
+            </tr>
+            <tr>
+              <td>Avg. Service Call Value</td>
+              <td>$150–$250</td>
+            </tr>
+            <tr>
+              <td>Calls Needed to Break Even</td>
+              <td class="highlight-green">~2 Jobs</td>
+            </tr>
+            <tr>
+              <td>Expected New Leads/Month</td>
+              <td class="highlight-green">15–30+</td>
+            </tr>
+          </table>
+          <p style="margin-top:20px;font-size:0.95em;">If the system brings you <strong>just 2 extra service calls per month</strong>, it pays for itself. Everything after that is pure profit. We're targeting 15–30+ new leads.</p>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom:15px;">Automations We'll Build</h4>
+          <ul class="automation-list">
+            <li>
+              <i class="fas fa-star"></i>
+              <div><span class="auto-title">The Review Machine</span><br>Auto-text after every job asking for a Google review. Turns happy customers into 5-star reviews on autopilot.</div>
+            </li>
+            <li>
+              <i class="fas fa-phone-volume"></i>
+              <div><span class="auto-title">The Never-Miss-a-Call Agent</span><br>AI phone receptionist captures leads 24/7 — evenings, weekends, and while you're on a job.</div>
+            </li>
+            <li>
+              <i class="fas fa-redo"></i>
+              <div><span class="auto-title">The Comeback Nudge</span><br>If a past customer hasn't called in 12 months, automated reminder: "Time for an appliance checkup?"</div>
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <div><span class="auto-title">The Local Dominator</span><br>Monthly Google Business Profile updates, new photos, posts, and Q&A answers to keep ranking high.</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         VISUAL DIRECTION
+         ============================================ -->
+    <div class="section animate-in" style="background:#fafbfc;">
+      <div class="section-header">
+        <div class="sub">Visual Direction</div>
+        <h3>Website Design Inspiration</h3>
+        <p>Your website will be built to match the quality of your work. Here are two directions.</p>
+      </div>
+
+      <div class="design-grid">
+        <a href="https://preview.themeforest.net/item/breezi-air-conditioner-hvac-repair-service-elementor-template-kit/full_screen_preview/62135561" class="design-card" target="_blank" rel="noopener noreferrer">
+          <div class="design-image-container">
+            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop" alt="Modern service company website design reference">
+          </div>
+          <div class="design-info">
+            <h4>The "Modern Pro" Model</h4>
+            <p>Clean, bold, high-trust. Blue & orange accents. Scroll animations. The Breezi HVAC template adapted for appliance repair.</p>
+          </div>
+        </a>
+
+        <a href="#" class="design-card" onclick="event.preventDefault();">
+          <div class="design-image-container">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop" alt="Classic clean service company website design reference">
+          </div>
+          <div class="design-info">
+            <h4>The "Clean & Classic" Model</h4>
+            <p>White space, professional photography, minimal design. Lets your 5-star reputation and quality speak for itself.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ============================================
+         AI AGENT STACK (Tier 2 Recommended)
+         ============================================ -->
+    <div class="agent-stack animate-in">
+      <div class="section-header">
+        <div class="sub">The AI Agent Stack</div>
+        <h3>Your 24/7 Digital Team</h3>
+        <p style="color:rgba(255,255,255,0.7);">Three AI agents working around the clock — so you can focus on repairs.</p>
+      </div>
+
+      <div class="agent-cards">
+        <div class="agent-card animate-in">
+          <div class="icon"><i class="fas fa-phone-alt"></i></div>
+          <h4>AI Phone Receptionist</h4>
+          <div class="agent-price">$99/mo</div>
+          <p>Dialzara Pro. 220 minutes. Calendar sync. Warm transfers. Handles after-hours calls, books appointments, answers FAQs. Sounds human.</p>
+        </div>
+
+        <div class="agent-card animate-in">
+          <div class="icon"><i class="fas fa-sms"></i></div>
+          <h4>Review & Reputation Agent</h4>
+          <div class="agent-price">~$15/mo</div>
+          <p>Automated SMS via Twilio. Sends review requests after every completed job. Turns service calls into 5-star Google reviews.</p>
+        </div>
+
+        <div class="agent-card animate-in">
+          <div class="icon"><i class="fas fa-pencil-alt"></i></div>
+          <h4>Local SEO Content Agent</h4>
+          <div class="agent-price">Included</div>
+          <p>Built into the monthly retainer. Monthly blog posts, Google Business updates, photo optimization, and local keyword targeting.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================
+         90-DAY ROADMAP
+         ============================================ -->
+    <div class="section animate-in" style="background: var(--primary-dark); color: white;">
+      <div class="section-header">
+        <div class="sub" style="color:var(--primary-orange);">Execution Plan</div>
+        <h3 style="color:white;">90-Day Roadmap</h3>
+      </div>
+
+      <table class="data-table" style="color:white;">
+        <thead>
+          <tr>
+            <th style="color:var(--primary-orange);border-bottom-color:#444;">Phase</th>
+            <th style="color:var(--primary-orange);border-bottom-color:#444;">Focus</th>
+            <th style="color:var(--primary-orange);border-bottom-color:#444;">Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="border-bottom-color:#333;"><strong style="color:white;">Month 1: Launch</strong></td>
+            <td style="border-bottom-color:#333;color:#ccc;">Build website. Set up Google Business Profile. Launch AI phone agent.</td>
+            <td style="border-bottom-color:#333;color:#ccc;">Professional website live. AI answering calls. Google profile optimized with photos & keywords.</td>
+          </tr>
+          <tr>
+            <td style="border-bottom-color:#333;"><strong style="color:white;">Month 2: Grow</strong></td>
+            <td style="border-bottom-color:#333;color:#ccc;">SEO optimization. Review generation campaign. First blog posts published.</td>
+            <td style="border-bottom-color:#333;color:#ccc;">Ranking for key local searches. 15+ new Google reviews. Organic traffic building.</td>
+          </tr>
+          <tr>
+            <td><strong style="color:white;">Month 3: Dominate</strong></td>
+            <td style="color:#ccc;">Full SEO push. AI voice tuning. SMS marketing to past customers.</td>
+            <td style="color:#ccc;">Top 3 Google Maps for "appliance repair Thousand Oaks." 30+ Google reviews. Steady inbound leads.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ============================================
+         PRICING
+         ============================================ -->
+    <div class="section animate-in">
+      <div class="section-header">
+        <div class="sub">Investment</div>
+        <h3>Simple, Transparent Pricing</h3>
+        <p>No hidden fees. No long-term lock-in. Cancel anytime.</p>
+      </div>
+
+      <div class="pricing-wrapper">
+        <div class="pricing-card">
+          <h4>One-Time Setup</h4>
+          <div class="price">FREE</div>
+          <p style="color:#888;">Website build valued at $2,000+</p>
+          <ul class="features-list">
+            <li><i class="fas fa-check"></i> Full Professional Website</li>
+            <li><i class="fas fa-check"></i> Google Business Optimization</li>
+            <li><i class="fas fa-check"></i> AI Phone Agent Setup</li>
+            <li><i class="fas fa-check"></i> Review System Configuration</li>
+          </ul>
+        </div>
+        <div class="pricing-card dark">
+          <h4>Monthly Partnership</h4>
+          <div class="price">$200–$300 <span>/ Month</span></div>
+          <p>All-inclusive digital growth</p>
+          <ul class="features-list">
+            <li><i class="fas fa-check"></i> Website Hosting & Maintenance</li>
+            <li><i class="fas fa-check"></i> AI Phone Receptionist ($99 Dialzara)</li>
+            <li><i class="fas fa-check"></i> Local SEO & Content Creation</li>
+            <li><i class="fas fa-check"></i> Review Generation Automation</li>
+            <li><i class="fas fa-check"></i> Monthly Performance Reports</li>
+            <li><i class="fas fa-check"></i> Domain & Hosting Included</li>
+          </ul>
+        </div>
+      </div>
+      <p style="text-align:center;font-size:0.9em;color:#888;margin-top:20px;font-style:italic;">*AI phone minutes (220/mo) included in monthly. SMS costs (~$10-15/mo) included. No surprise charges.</p>
+    </div>
+
+    <!-- ============================================
+         CTA
+         ============================================ -->
+    <div class="cta-footer">
+      <h3>Ready to Get Found Online?</h3>
+      <p>Your 5-star reputation is the best in the valley. Let's make sure every homeowner in Thousand Oaks knows it.</p>
+      <div class="cta-group">
+        <a href="#" class="cta-btn" onclick="event.preventDefault();alert('Proposal approved! Drew will be in touch within 24 hours.');">Approve Proposal</a>
+        <a href="tel:+18188070200" class="cta-btn-secondary">Call Drew (818) 807-0200</a>
+      </div>
+      <div class="fine-print">By approving, you authorize the $200–$300/month marketing partnership. Website build is free.</div>
+    </div>
+
+    <!-- Footer -->
+    <div class="proposal-footer">
+      <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+    </div>
+
+  </div>
+
+  <script>
+    // Scroll-triggered animations
+    (function() {
+      var elements = document.querySelectorAll('.animate-in');
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      elements.forEach(function(el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+</body>
+</html>
