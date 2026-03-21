@@ -483,6 +483,8 @@
   // Handle form submission
   form.addEventListener('submit', function(e) {
     e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin" style="margin-right:10px;"></i>Processing...';
 
     var sigData = {
       name: nameInput.value.trim(),
@@ -493,6 +495,8 @@
       timestamp: new Date().toISOString(),
       agreement: 'FixMan Appliance Repair — Digital Growth Partnership — $200/month'
     };
+
+    var timeStr = today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
 
     // Store signature locally
     try {
@@ -505,17 +509,61 @@
     console.log('=== AGREEMENT SIGNED ===');
     console.log(JSON.stringify(sigData, null, 2));
 
-    // Show success
-    form.style.display = 'none';
-    var success = document.getElementById('sigSuccess');
-    success.classList.add('show');
-    document.getElementById('sigConfirmText').textContent =
-      'Thank you, ' + sigData.name.split(' ')[0] + '. Your agreement has been recorded.';
-    document.getElementById('confirmDate').textContent = sigData.date + ' at ' +
-      today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+    // Send email notification via Web3Forms
+    // Sends to Drew (dq@drewquevedo.com) + CC to signer
+    var emailBody = '--- SIGNED SERVICE AGREEMENT ---\n\n' +
+      'Client Name: ' + sigData.name + '\n' +
+      'Business: ' + sigData.business + '\n' +
+      'Email: ' + sigData.email + '\n' +
+      'Signature: ' + sigData.signature + '\n' +
+      'Date Signed: ' + sigData.date + ' at ' + timeStr + '\n' +
+      'Timestamp: ' + sigData.timestamp + '\n\n' +
+      'Agreement: ' + sigData.agreement + '\n\n' +
+      '--- AGREEMENT TERMS ---\n' +
+      '• Service: Digital Growth Partnership (Website + AI Agents + Local SEO)\n' +
+      '• Monthly Fee: $200/month (flat, all-inclusive for first 3 months)\n' +
+      '• After Month 3: AI agent costs at cost + 20% service fee\n' +
+      '• Commitment: Month-to-month, cancel anytime\n' +
+      '• Website Build: FREE\n\n' +
+      'This agreement was electronically signed and is legally binding under the U.S. ESIGN Act.';
 
-    // Scroll to success
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: 'c80f94c2-94b4-47a2-acab-f5c772c4113f',
+        subject: '✅ CONTRACT SIGNED — ' + sigData.business + ' (' + sigData.name + ')',
+        from_name: sigData.name + ' via FixMan Contract',
+        replyto: sigData.email,
+        ccemail: sigData.email,
+        name: sigData.name,
+        email: sigData.email,
+        business: sigData.business,
+        signature: sigData.signature,
+        date_signed: sigData.date + ' at ' + timeStr,
+        agreement_type: sigData.agreement,
+        message: emailBody
+      })
+    })
+    .then(function(res) { return res.json(); })
+    .then(function(data) {
+      console.log('Email sent:', data);
+    })
+    .catch(function(err) {
+      console.warn('Email send failed (signature still recorded):', err);
+    })
+    .finally(function() {
+      // Show success regardless
+      form.style.display = 'none';
+      var success = document.getElementById('sigSuccess');
+      success.classList.add('show');
+      document.getElementById('sigConfirmText').textContent =
+        'Thank you, ' + sigData.name.split(' ')[0] + '. Your agreement has been recorded. A copy has been sent to ' + sigData.email + '.';
+      document.getElementById('confirmDate').textContent = sigData.date + ' at ' + timeStr;
+
+      // Scroll to success
+      success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   });
 })();
 </script>
