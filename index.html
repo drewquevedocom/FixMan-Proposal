@@ -403,7 +403,7 @@
   .agent-stack .section-header .sub { color: var(--primary-orange); }
   .agent-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     margin-top: 30px;
   }
@@ -830,56 +830,61 @@
         <div class="agent-card animate-in">
           <div class="icon"><i class="fas fa-phone-alt"></i></div>
           <h4>AI Phone Receptionist</h4>
-          <div class="agent-price">~$15–$25/mo</div>
-          <p>Powered by <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a> Voice AI. Answers calls 24/7, books appointments, handles FAQs — sounds human. Includes a local business number ($1/mo), AI voice agent ($0.08/min), and inbound telephony.</p>
-          <div style="margin-top:12px;padding:12px 16px;background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.85em;line-height:1.6;">
-            <strong style="color:var(--primary-orange);">Starter Usage Estimate (~100 mins/mo):</strong><br>
-            Phone number: $1/mo<br>
-            Voice AI (100 min × $0.08): ~$8/mo<br>
-            Inbound calls (100 min × $0.007): ~$0.70/mo<br>
-            <strong>Total: ~$10–$15/mo</strong><br>
-            <span style="color:rgba(255,255,255,0.5);font-size:0.9em;">Scales as you grow — heavy months (200+ mins) would be ~$20–$25/mo</span>
-          </div>
+          <div class="agent-price">~$10–$25/mo</div>
+          <p>Powered by <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a> Voice AI. Answers calls 24/7, books appointments, handles FAQs — sounds human. Local business number included. Pay only for minutes used.</p>
         </div>
 
         <div class="agent-card animate-in">
           <div class="icon"><i class="fas fa-sms"></i></div>
           <h4>SMS Review & Follow-Up Agent</h4>
-          <div class="agent-price">~$3–$8/mo</div>
-          <p>Also powered by <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a> SMS. Sends review requests after every job, appointment reminders, and follow-ups. Turns service calls into 5-star Google reviews.</p>
-          <div style="margin-top:12px;padding:12px 16px;background:rgba(255,255,255,0.05);border-radius:8px;font-size:0.85em;line-height:1.6;">
-            <strong style="color:var(--primary-orange);">Starter Usage Estimate (~200 texts/mo):</strong><br>
-            SMS number (shared with voice): $0/mo<br>
-            SMS capability add-on: $0.10/mo<br>
-            Outbound SMS (200 × $0.004): ~$0.80/mo<br>
-            Carrier fees (~$0.003 avg): ~$0.60/mo<br>
-            <strong>Total: ~$2–$3/mo</strong><br>
-            <span style="color:rgba(255,255,255,0.5);font-size:0.9em;">Heavy months (500+ texts) would be ~$5–$8/mo</span>
-          </div>
+          <div class="agent-price">~$2–$8/mo</div>
+          <p>Also powered by <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a>. Sends review requests after every job, appointment reminders, and follow-ups. Turns service calls into 5-star Google reviews.</p>
         </div>
 
         <div class="agent-card animate-in">
           <div class="icon"><i class="fas fa-envelope"></i></div>
           <h4>Email & CRM</h4>
           <div class="agent-price">Free</div>
-          <p>We'll use your existing email to manage customer communication, appointment confirmations, and follow-ups. No extra CRM cost needed right now — as you grow, we'll upgrade to a full CRM system when the volume demands it.</p>
+          <p>We use your existing email for customer communication, confirmations, and follow-ups. No CRM cost needed right now — we upgrade when volume demands it.</p>
         </div>
 
         <div class="agent-card animate-in">
           <div class="icon"><i class="fas fa-pencil-alt"></i></div>
           <h4>Local SEO Content Agent</h4>
           <div class="agent-price">Included</div>
-          <p>Built into the monthly retainer. Monthly blog posts, Google Business updates, photo optimization, and local keyword targeting.</p>
+          <p>Built into the monthly retainer. Blog posts, Google Business updates, photo optimization, and local keyword targeting.</p>
         </div>
       </div>
 
-      <div style="max-width:600px;margin:30px auto 0;padding:20px 24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
-        <h4 style="color:var(--primary-orange);margin-bottom:10px;font-size:1em;">Total AI Agent Stack Cost</h4>
-        <p style="color:rgba(255,255,255,0.8);font-size:0.95em;line-height:1.6;margin:0;">
-          <strong style="color:white;">Starter (typical month): ~$13–$18/mo</strong><br>
-          <span style="color:rgba(255,255,255,0.6);font-size:0.9em;">Busy month (200+ calls, 500+ texts): ~$25–$33/mo</span><br><br>
-          All powered by <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a> — enterprise-grade telecom at pay-as-you-go rates. No contracts, no minimums. You only pay for what you use.
-        </p>
+      <!-- Cost Breakdown Box -->
+      <div style="max-width:680px;margin:30px auto 0;padding:24px 28px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;">
+        <h4 style="color:var(--primary-orange);margin-bottom:14px;font-size:1.05em;">Telnyx Cost Breakdown — What You Actually Pay</h4>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin-bottom:16px;">
+          <div style="padding:14px 16px;background:rgba(255,255,255,0.04);border-radius:8px;">
+            <strong style="color:white;font-size:0.95em;"><i class="fas fa-phone-alt" style="color:var(--primary-orange);margin-right:6px;"></i> Voice AI</strong>
+            <div style="color:rgba(255,255,255,0.6);font-size:0.85em;line-height:1.7;margin-top:8px;">
+              Phone number: $1/mo<br>
+              AI agent: $0.08/min<br>
+              Inbound calls: $0.007/min<br>
+              <strong style="color:white;">~100 mins/mo = ~$10–$15</strong>
+            </div>
+          </div>
+          <div style="padding:14px 16px;background:rgba(255,255,255,0.04);border-radius:8px;">
+            <strong style="color:white;font-size:0.95em;"><i class="fas fa-sms" style="color:var(--primary-orange);margin-right:6px;"></i> SMS</strong>
+            <div style="color:rgba(255,255,255,0.6);font-size:0.85em;line-height:1.7;margin-top:8px;">
+              SMS add-on: $0.10/mo<br>
+              Per text: $0.004 + carrier fee<br>
+              &nbsp;<br>
+              <strong style="color:white;">~200 texts/mo = ~$2–$3</strong>
+            </div>
+          </div>
+        </div>
+        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:14px;">
+          <p style="color:rgba(255,255,255,0.8);font-size:0.95em;line-height:1.6;margin:0;">
+            <strong style="color:white;font-size:1.05em;">Typical month: ~$13–$18 &nbsp;|&nbsp; Busy month: ~$25–$33</strong><br>
+            <span style="color:rgba(255,255,255,0.5);font-size:0.85em;">All <a href="https://telnyx.com/" target="_blank" style="color:var(--primary-orange);">Telnyx</a> — enterprise-grade telecom, pay-as-you-go. No contracts, no minimums.</span>
+          </p>
+        </div>
       </div>
     </div>
 
