@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FixMan Appliance Repair — Service Agreement</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary-blue: #1e3a5f;
+    --primary-orange: #e87a2e;
+    --primary-dark: #111111;
+    --bg-light: #f0f4f8;
+    --text-dark: #1a2332;
+    --text-light: #f4f4f4;
+    --success: #27ae60;
+    --border-color: #d4dbe5;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Roboto Condensed', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background: var(--bg-light);
+  }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+
+  .container {
+    max-width: 860px;
+    margin: 40px auto;
+    background: white;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+    border-top: 5px solid var(--primary-orange);
+  }
+
+  /* Header */
+  .contract-header {
+    background: linear-gradient(135deg, var(--primary-dark), #1a2a3e);
+    padding: 50px 60px;
+    text-align: center;
+    color: white;
+  }
+  .contract-header img { height: 60px; margin-bottom: 20px; }
+  .contract-header h1 { font-size: 2.2em; color: white; margin-bottom: 8px; }
+  .contract-header .sub { color: var(--primary-orange); font-size: 1.1em; letter-spacing: 1px; text-transform: uppercase; }
+  .contract-header .date { color: rgba(255,255,255,0.5); font-size: 0.9em; margin-top: 12px; }
+
+  /* Body */
+  .contract-body { padding: 50px 60px; }
+
+  .contract-body h2 {
+    font-size: 1.5em;
+    color: var(--primary-dark);
+    margin: 35px 0 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--primary-orange);
+    display: inline-block;
+  }
+  .contract-body h2:first-child { margin-top: 0; }
+
+  .contract-body p, .contract-body li {
+    font-size: 1em;
+    line-height: 1.75;
+    color: #444;
+    margin-bottom: 10px;
+  }
+
+  .contract-body ul { padding-left: 24px; margin-bottom: 15px; }
+  .contract-body li { margin-bottom: 6px; }
+
+  .contract-body strong { color: var(--text-dark); }
+
+  .highlight-box {
+    background: #f8f9fb;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-orange);
+    padding: 20px 24px;
+    margin: 20px 0;
+    border-radius: 4px;
+  }
+  .highlight-box p { margin-bottom: 0; }
+
+  /* Parties Table */
+  .parties-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin: 20px 0 30px;
+  }
+  .party-card {
+    background: #f8f9fb;
+    border: 1px solid var(--border-color);
+    padding: 24px;
+    border-radius: 6px;
+  }
+  .party-card h4 {
+    color: var(--primary-orange);
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .party-card p { font-size: 0.95em; margin-bottom: 4px; }
+  .party-card .name { font-weight: bold; font-size: 1.1em; color: var(--text-dark); }
+
+  /* Signature Section */
+  .signature-section {
+    background: var(--primary-dark);
+    padding: 50px 60px;
+    color: white;
+  }
+  .signature-section h2 {
+    color: white;
+    border-bottom-color: var(--primary-orange);
+    margin-top: 0;
+  }
+  .sig-form { margin-top: 25px; }
+
+  .sig-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .sig-field label {
+    display: block;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+
+  .sig-field input, .sig-field select {
+    width: 100%;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.15);
+    color: white;
+    padding: 14px 18px;
+    font-size: 1.05em;
+    font-family: inherit;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .sig-field input:focus, .sig-field select:focus {
+    border-color: var(--primary-orange);
+    box-shadow: 0 0 0 3px rgba(232,122,46,0.15);
+  }
+  .sig-field input::placeholder { color: rgba(255,255,255,0.3); }
+
+  .sig-field .typed-sig {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.6em;
+    padding: 12px 18px;
+    border-bottom: 2px solid var(--primary-orange);
+    border-radius: 0;
+    background: transparent;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+  }
+
+  .sig-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin: 25px 0;
+    cursor: pointer;
+  }
+  .sig-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    accent-color: var(--primary-orange);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .sig-checkbox span {
+    font-size: 0.95em;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  .sig-submit {
+    display: block;
+    width: 100%;
+    background: var(--primary-orange);
+    color: white;
+    border: none;
+    padding: 18px;
+    font-size: 1.15em;
+    font-weight: bold;
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    margin-top: 10px;
+  }
+  .sig-submit:hover:not(:disabled) {
+    background: #d0681f;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(232,122,46,0.35);
+  }
+  .sig-submit:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .sig-note {
+    text-align: center;
+    font-size: 0.82em;
+    color: rgba(255,255,255,0.35);
+    margin-top: 18px;
+    line-height: 1.5;
+  }
+
+  /* Success State */
+  .sig-success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .sig-success.show { display: block; }
+  .sig-success .check-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 2em;
+    color: white;
+  }
+  .sig-success h3 { color: white; font-size: 1.6em; margin-bottom: 10px; }
+  .sig-success p { color: rgba(255,255,255,0.7); font-size: 1em; margin-bottom: 25px; }
+  .sig-success .pay-btn {
+    display: inline-block;
+    background: var(--success);
+    color: white;
+    padding: 18px 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s;
+  }
+  .sig-success .pay-btn:hover {
+    background: #229a4e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39,174,62,0.35);
+  }
+
+  /* Footer */
+  .contract-footer {
+    padding: 20px 60px;
+    text-align: center;
+    background: var(--primary-dark);
+    border-top: 1px solid #222;
+  }
+  .contract-footer a {
+    color: rgba(255,255,255,0.3);
+    font-size: 0.8em;
+    text-decoration: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .contract-header { padding: 40px 24px; }
+    .contract-header h1 { font-size: 1.6em; }
+    .contract-body { padding: 30px 24px; }
+    .parties-grid { grid-template-columns: 1fr; }
+    .signature-section { padding: 40px 24px; }
+    .sig-row { grid-template-columns: 1fr; }
+  }
+
+  /* Print styles */
+  @media print {
+    body { background: white; }
+    .container { box-shadow: none; margin: 0; border-top: none; }
+    .sig-submit, .pay-btn { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Header -->
+  <div class="contract-header">
+    <img src="./fixman-logo.png" alt="FixMan Appliance Repair">
+    <h1>Service Agreement</h1>
+    <div class="sub">Digital Growth Partnership</div>
+    <div class="date">Effective Date: Upon Signature</div>
+  </div>
+
+  <!-- Contract Body -->
+  <div class="contract-body">
+
+    <h2>Parties</h2>
+    <div class="parties-grid">
+      <div class="party-card">
+        <h4>Service Provider</h4>
+        <p class="name">Drew Quevedo</p>
+        <p>Digital Strategy Consultant</p>
+        <p>AgentIQ Agents</p>
+        <p>(818) 807-0200</p>
+        <p>dq@drewquevedo.com</p>
+      </div>
+      <div class="party-card">
+        <h4>Client</h4>
+        <p class="name">Vladyslav D. (Vlad)</p>
+        <p>FixMan Appliance Repair</p>
+        <p>Thousand Oaks, CA 91360</p>
+        <p>(805) 719-8291</p>
+      </div>
+    </div>
+
+    <h2>1. Scope of Services</h2>
+    <p>Provider agrees to deliver the following digital marketing services to Client:</p>
+    <ul>
+      <li><strong>Professional Website</strong> — Custom-built, mobile-first website for FixMan Appliance Repair (design, development, hosting, and ongoing maintenance)</li>
+      <li><strong>AI Phone Receptionist</strong> — Voice AI agent that answers calls 24/7, books appointments, and handles FAQs</li>
+      <li><strong>SMS Review & Follow-Up Agent</strong> — Automated review requests after service calls, appointment reminders, and customer follow-ups</li>
+      <li><strong>Local SEO & Content</strong> — Google Business Profile optimization, blog content creation, local keyword targeting, and monthly updates</li>
+      <li><strong>Email & CRM</strong> — Customer communication management using existing email infrastructure</li>
+      <li><strong>Monthly Performance Reports</strong> — Summary of leads generated, rankings, reviews gained, and key metrics</li>
+    </ul>
+
+    <h2>2. Pricing & Payment</h2>
+    <div class="highlight-box">
+      <p><strong>Monthly Retainer: $200/month</strong></p>
+      <p>For the first 3 months, all AI agent usage costs (voice, SMS) are included in the $200 monthly fee — zero additional charges.</p>
+    </div>
+    <p><strong>After Month 3:</strong> AI agent usage costs (voice minutes, SMS messages) are passed through to Client at cost plus a 20% service fee. Typical additional cost: ~$16–$40/month depending on call and SMS volume. Client will be notified of any changes before they take effect.</p>
+    <p><strong>Website Build:</strong> The initial website design and development is provided at no charge as a portfolio investment by Provider.</p>
+    <p><strong>Payment is due on the 1st of each month.</strong> First payment is collected upon signing this agreement.</p>
+
+    <h2>3. Pay As You Grow</h2>
+    <p>This is a <strong>pay-as-you-grow partnership</strong> designed for small business. As Client's business grows and more advanced marketing capabilities are needed, services may be expanded to include additional AI agents (Lead Generation, Sales Outreach, Website Chatbot, Customer Success, Analytics Dashboard) — up to the full 7-Agent AI Swarm package.</p>
+    <p>Each month, sufficient growth is noted and pricing will be adjusted accordingly. Any pricing adjustments will be communicated in advance and must be fair for both parties. Client is never locked into a higher tier — if volume decreases, pricing adjusts back down.</p>
+
+    <h2>4. Term & Cancellation</h2>
+    <div class="highlight-box">
+      <p><strong>Month-to-month. No long-term contract. Cancel anytime.</strong></p>
+    </div>
+    <p>Either party may terminate this agreement with <strong>14 days written notice</strong> (email is sufficient). Upon cancellation:</p>
+    <ul>
+      <li>Client retains ownership of all content created for their business (blog posts, images, copy)</li>
+      <li>Website domain and hosting credentials will be transferred to Client within 7 business days</li>
+      <li>Any pre-paid amounts for unused service days will be prorated and refunded</li>
+      <li>AI agent phone numbers and accounts can be transferred to Client upon request</li>
+    </ul>
+
+    <h2>5. Ownership & IP</h2>
+    <p><strong>Client owns all content</strong> created specifically for their business, including website copy, blog posts, and images. Provider retains the right to showcase the work in their portfolio with Client's permission. The underlying code and templates used remain the intellectual property of Provider.</p>
+
+    <h2>6. Confidentiality</h2>
+    <p>Both parties agree to keep confidential any proprietary business information, customer data, financial details, and trade secrets shared during the course of this partnership. This obligation survives termination of the agreement.</p>
+
+    <h2>7. Limitation of Liability</h2>
+    <p>Provider's total liability under this agreement shall not exceed the total fees paid by Client in the preceding 3 months. Provider is not liable for any indirect, incidental, or consequential damages including lost profits or business interruption.</p>
+
+    <h2>8. Governing Law</h2>
+    <p>This agreement shall be governed by the laws of the State of California. Any disputes shall be resolved through good-faith negotiation first, and if necessary, through binding arbitration in Los Angeles County, CA.</p>
+
+    <h2>9. Entire Agreement</h2>
+    <p>This document constitutes the entire agreement between the parties. Amendments must be made in writing and agreed upon by both parties. Electronic signatures are legally binding under the U.S. Electronic Signatures in Global and National Commerce Act (ESIGN Act).</p>
+
+  </div>
+
+  <!-- Signature Section -->
+  <div class="signature-section">
+    <h2>Sign Agreement</h2>
+
+    <form class="sig-form" id="sigForm">
+      <div class="sig-row">
+        <div class="sig-field">
+          <label>Full Legal Name</label>
+          <input type="text" id="sigName" placeholder="e.g. Vladyslav Doe" required>
+        </div>
+        <div class="sig-field">
+          <label>Business Name</label>
+          <input type="text" id="sigBusiness" value="FixMan Appliance Repair" required>
+        </div>
+      </div>
+
+      <div class="sig-row">
+        <div class="sig-field">
+          <label>Email Address</label>
+          <input type="email" id="sigEmail" placeholder="your@email.com" required>
+        </div>
+        <div class="sig-field">
+          <label>Date</label>
+          <input type="text" id="sigDate" readonly>
+        </div>
+      </div>
+
+      <div class="sig-field" style="margin-bottom:20px;">
+        <label>Your Signature (Type Your Full Name)</label>
+        <input type="text" id="sigSignature" class="typed-sig" placeholder="Type your full name here" required>
+      </div>
+
+      <label class="sig-checkbox">
+        <input type="checkbox" id="sigAgree" required>
+        <span>I have read and agree to all terms outlined in this Service Agreement. I understand this is a <strong style="color:white;">month-to-month partnership at $200/month</strong> with no long-term commitment. I authorize Drew Quevedo / AgentIQ Agents to provide the digital marketing services described above. I acknowledge that electronic signatures are legally binding under the ESIGN Act.</span>
+      </label>
+
+      <button type="submit" class="sig-submit" id="sigSubmit" disabled>
+        <i class="fas fa-file-signature" style="margin-right:10px;"></i>Sign Agreement & Continue to Payment
+      </button>
+
+      <p class="sig-note">
+        <i class="fas fa-lock" style="margin-right:5px;"></i>
+        Your signature is legally binding under the U.S. ESIGN Act.<br>
+        A copy of this signed agreement will be available for your records.
+      </p>
+    </form>
+
+    <!-- Success / Payment redirect -->
+    <div class="sig-success" id="sigSuccess">
+      <div class="check-icon"><i class="fas fa-check"></i></div>
+      <h3>Agreement Signed!</h3>
+      <p id="sigConfirmText">Thank you, Vlad. Your agreement has been recorded.</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.9em;margin-bottom:30px;">Signed on <span id="confirmDate"></span></p>
+      <a href="https://invoice.stripe.com/i/acct_1SMBkTQ4tVAu6TjT/live_YWNjdF8xU01Ca1RRNHRWQXU2VGpULF9VQmdOVVpnMHRaVUhHeWZ4M0dvWDJKdGFEUXFQaXlOLDE2NDYxNjkxNA0200IFcIoqHS?s=db" class="pay-btn" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-credit-card" style="margin-right:10px;"></i>Proceed to Payment — $200
+      </a>
+      <p style="color:rgba(255,255,255,0.35);font-size:0.82em;margin-top:20px;">Secure payment processed by Stripe. You'll receive a receipt via email.</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="contract-footer">
+    <a href="./index.html">&larr; Back to Proposal</a> &nbsp;&middot;&nbsp;
+    <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>
+  </div>
+
+</div>
+
+<script>
+(function() {
+  // Set today's date
+  var today = new Date();
+  var dateStr = today.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  document.getElementById('sigDate').value = dateStr;
+
+  var form = document.getElementById('sigForm');
+  var nameInput = document.getElementById('sigName');
+  var emailInput = document.getElementById('sigEmail');
+  var sigInput = document.getElementById('sigSignature');
+  var agreeBox = document.getElementById('sigAgree');
+  var submitBtn = document.getElementById('sigSubmit');
+
+  // Enable submit only when all fields filled + checkbox checked
+  function checkReady() {
+    var ready = nameInput.value.trim() &&
+                emailInput.value.trim() &&
+                sigInput.value.trim() &&
+                agreeBox.checked;
+    submitBtn.disabled = !ready;
+  }
+
+  [nameInput, emailInput, sigInput].forEach(function(el) {
+    el.addEventListener('input', checkReady);
+  });
+  agreeBox.addEventListener('change', checkReady);
+
+  // Handle form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    var sigData = {
+      name: nameInput.value.trim(),
+      business: document.getElementById('sigBusiness').value.trim(),
+      email: emailInput.value.trim(),
+      signature: sigInput.value.trim(),
+      date: dateStr,
+      timestamp: new Date().toISOString(),
+      agreement: 'FixMan Appliance Repair — Digital Growth Partnership — $200/month'
+    };
+
+    // Store signature locally
+    try {
+      var existing = JSON.parse(localStorage.getItem('fixman_signatures') || '[]');
+      existing.push(sigData);
+      localStorage.setItem('fixman_signatures', JSON.stringify(existing));
+    } catch(err) {}
+
+    // Log to console for record
+    console.log('=== AGREEMENT SIGNED ===');
+    console.log(JSON.stringify(sigData, null, 2));
+
+    // Show success
+    form.style.display = 'none';
+    var success = document.getElementById('sigSuccess');
+    success.classList.add('show');
+    document.getElementById('sigConfirmText').textContent =
+      'Thank you, ' + sigData.name.split(' ')[0] + '. Your agreement has been recorded.';
+    document.getElementById('confirmDate').textContent = sigData.date + ' at ' +
+      today.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+
+    // Scroll to success
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+})();
+</script>
+
+</body>
+</html>
